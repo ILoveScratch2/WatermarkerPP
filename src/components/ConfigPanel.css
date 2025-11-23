@@ -1,0 +1,63 @@
+.config-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.config-panel section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.config-panel label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #262626;
+}
+
+.config-panel input[type="text"],
+.config-panel select {
+  padding: 8px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.config-panel input[type="range"] {
+  width: 100%;
+}
+
+.config-panel input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.config-panel input[type="color"] {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.config-panel button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: #f0f0f0;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.config-panel button:hover {
+  background: #e0e0e0;
+}
+
+.config-panel span {
+  font-size: 14px;
+  color: #595959;
+}

@@ -1,0 +1,32 @@
+.number-slider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.number-slider input[type="range"] {
+  flex: 1;
+  min-width: 0;
+}
+
+.number-slider .number-input {
+  width: 70px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.number-slider .number-input:focus {
+  outline: none;
+  border-color: #007acc;
+}
+
+.number-slider .number-display {
+  min-width: 60px;
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+}

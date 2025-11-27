@@ -19,10 +19,13 @@ const INITIAL_CONFIG: WatermarkConfig = {
     enabled: false,
     spacingX: 100,
     spacingY: 100,
+    offsetX: 0,
+    offsetY: 0,
   },
   fontSize: 48,
   textColor: '#000000',
   scale: 1,
+  grayscale: false,
 };
 
 function App() {

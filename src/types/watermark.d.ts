@@ -15,6 +15,8 @@ export interface TilingConfig {
   enabled: boolean;
   spacingX: number;
   spacingY: number;
+  offsetX: number;
+  offsetY: number;
 }
 
 export interface WatermarkConfig {
@@ -28,6 +30,7 @@ export interface WatermarkConfig {
   fontSize: number;
   textColor: string;
   scale: number;
+  grayscale: boolean;
 }
 
 export interface SourceImage {

@@ -48,6 +48,10 @@ export const renderWatermark = async (
 
   ctx.drawImage(sourceImage.element, 0, 0);
   ctx.globalAlpha = config.opacity;
+  
+  if (config.type === 'image' && config.grayscale) {
+    ctx.filter = 'grayscale(100%)';
+  }
 
   if (config.type === 'text') {
     ctx.font = `${config.fontSize}px sans-serif`;
@@ -57,8 +61,8 @@ export const renderWatermark = async (
     ctx.fillStyle = config.textColor;
 
     if (config.tiling.enabled) {
-      for (let x = 0; x < canvas.width; x += textWidth + config.tiling.spacingX) {
-        for (let y = 0; y < canvas.height; y += textHeight + config.tiling.spacingY) {
+      for (let x = config.tiling.offsetX; x < canvas.width; x += textWidth + config.tiling.spacingX) {
+        for (let y = config.tiling.offsetY; y < canvas.height; y += textHeight + config.tiling.spacingY) {
           ctx.fillText(config.content, x, y + textHeight);
         }
       }
@@ -87,8 +91,8 @@ export const renderWatermark = async (
     const scaledHeight = watermarkImg.height * config.scale;
 
     if (config.tiling.enabled) {
-      for (let x = 0; x < canvas.width; x += scaledWidth + config.tiling.spacingX) {
-        for (let y = 0; y < canvas.height; y += scaledHeight + config.tiling.spacingY) {
+      for (let x = config.tiling.offsetX; x < canvas.width; x += scaledWidth + config.tiling.spacingX) {
+        for (let y = config.tiling.offsetY; y < canvas.height; y += scaledHeight + config.tiling.spacingY) {
           ctx.drawImage(watermarkImg, x, y, scaledWidth, scaledHeight);
         }
       }
@@ -107,6 +111,7 @@ export const renderWatermark = async (
   }
 
   ctx.globalAlpha = 1;
+  ctx.filter = 'none';
 };
 
 export const exportCanvas = (canvas: HTMLCanvasElement, filename: string): void => {

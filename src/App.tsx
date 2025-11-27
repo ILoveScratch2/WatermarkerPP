@@ -6,7 +6,7 @@ import { exportCanvas } from './utils/watermarkRenderer';
 import type { WatermarkConfig, SourceImage } from './types/watermark';
 import './App.css';
 
-const DEFAULT_WATERMARK_URL = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSI0OCIgZmlsbD0iIzAwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSI+V0FURVJNQVJLPC90ZXh0Pjwvc3ZnPg==';
+const DEFAULT_WATERMARK_URL = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSI0OCIgZmlsbD0iIzAwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSI+V0FURVJNQVJLPC90ZXh0Pjwvc3ZnPg==';
 
 const INITIAL_CONFIG: WatermarkConfig = {
   type: 'text',

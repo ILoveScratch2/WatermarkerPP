@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ImageUploader } from './components/ImageUploader';
 import { ConfigPanel } from './components/ConfigPanel';
 import { WatermarkCanvas } from './components/WatermarkCanvas';
+import { Footer } from './components/Footer';
 import { exportCanvas } from './utils/watermarkRenderer';
 import type { WatermarkConfig, SourceImage } from './types/watermark';
 import './App.css';
@@ -65,6 +66,8 @@ function App() {
           <WatermarkCanvas sourceImage={sourceImage} config={config} />
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }
